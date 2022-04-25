@@ -3,10 +3,10 @@ import '@styles/ProductItem.scss';
 import btadd from '@icons/bt_add_to_cart.svg';
 
 const ProductItem = () => {
-	const [cart, setCart] = useState('Hola');
+	const [cart, setCart] = useState([]);
 
 	const handleClick = () => {
-		setCart('Añadido');
+		setCart([]);
 	}
 
 	return (
@@ -20,7 +20,6 @@ const ProductItem = () => {
 				<figure onClick={ handleClick }>
 					<img src={ btadd } alt="" />
 				</figure>
-				{cart}
 			</div>
 		</div>
 	);
